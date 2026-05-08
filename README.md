@@ -1,24 +1,24 @@
 ﻿# Chitcot
 
-Chitcot adalah aplikasi chat Flutter dengan pendekatan offline-first menggunakan BLE mesh. Aplikasi mendukung chat berbasis radius, mode online, riwayat pesan lokal, serta attachment gambar dan audio.
+Chitcot is an offline-first Flutter chat app powered by BLE mesh communication. It supports radius-based channels, online mode, persistent local history, and image/audio attachments.
 
-## Fitur Utama
+## Key Features
 
-- Offline mesh chat berbasis Bluetooth Low Energy
-- Mode online/offline
-- Chat berbasis radius
-- Direct message ke peer terdeteksi
-- Riwayat chat persisten (tetap ada setelah aplikasi ditutup)
-- Attachment gambar dan audio dari file lokal
+- Offline mesh chat over Bluetooth Low Energy
+- Online/offline mode switch
+- Radius-based chat rooms
+- Direct messaging to discovered peers
+- Persistent local chat history
+- Image and audio attachments from local files
 
-## Requirement
+## Requirements
 
 - Flutter SDK 3.22+
 - Dart SDK 3.4+
-- Android SDK / Xcode sesuai target platform
-- Device fisik untuk pengujian BLE dan permission
+- Android SDK and/or Xcode (depending on target platform)
+- Physical device recommended for BLE and permission testing
 
-## Instalasi
+## Installation
 
 ```bash
 git clone <repo-url>
@@ -26,13 +26,13 @@ cd chitcot
 flutter pub get
 ```
 
-## Menjalankan Aplikasi
+## Run
 
 ```bash
 flutter run
 ```
 
-Untuk target spesifik:
+Specific targets:
 
 ```bash
 flutter run -d android
@@ -48,25 +48,24 @@ flutter build ios
 flutter build web
 ```
 
-## Permission dan Catatan Platform
+## Permissions and Platform Notes
 
-- Android: Bluetooth dan lokasi akan diminta saat startup
-- iOS: Bluetooth dan lokasi akan diminta saat startup
-- Fitur BLE direkomendasikan diuji di device fisik
+- Android: Bluetooth and location permissions are requested at startup
+- iOS: Bluetooth and location permissions are requested at startup
+- BLE functionality should be validated on physical devices
 
-## Struktur Direktori Singkat
+## Project Structure
 
-- `lib/app`: state dan UI utama
-- `lib/features/ble`: transport BLE dan discovery peer
-- `lib/features/mesh`: relay/mesh engine
-- `lib/features/security`: enkripsi dan identitas
-- `lib/features/sync`: sinkronisasi mode online
-- `lib/data/local/db`: skema database lokal
+- `lib/app`: app state and main UI
+- `lib/features/ble`: BLE transport and peer discovery
+- `lib/features/mesh`: mesh routing and relay logic
+- `lib/features/security`: identity and encryption
+- `lib/features/sync`: online sync flow
+- `lib/data/local/db`: local database schema
 
-## Quality Check
+## Quality Checks
 
 ```bash
 flutter analyze
 flutter test
 ```
-

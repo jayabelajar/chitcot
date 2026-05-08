@@ -22,7 +22,7 @@ Chitcot adalah aplikasi chat Flutter dengan pendekatan offline-first menggunakan
 
 ```bash
 git clone <repo-url>
-cd bluemesh_chat
+cd chitcot
 flutter pub get
 ```
 

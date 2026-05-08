@@ -21,7 +21,7 @@ Chitcot is an offline-first Flutter chat app powered by BLE mesh communication. 
 ## Installation
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/jayabelajar/chitcot
 cd chitcot
 flutter pub get
 ```
